@@ -7,7 +7,7 @@ public class Cup {
 
     public Cup(int sides1, int sides2) {
         die1 = new Die(sides1);
-        die2 = new Die((sides2));
+        die2 = new Die(sides2);
 
 
     }
@@ -16,7 +16,7 @@ public class Cup {
         int count = 0;
         for (int i = 0; i < times; i++) {
             int result1 = die1.roll();
-            int result2 = (die2 != null) ? die2.roll() : 0;
+            int result2 = die2.roll();
             if (result1 == result2) {
                 count++;
             }
