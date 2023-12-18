@@ -7,13 +7,13 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        System.out.print("Enter name: ");
+        System.out.print("Enter name: "+"\n");
         String playerName = scanner.nextLine();
 
         boolean playAgain = true;
 
         while (playAgain) {
-            System.out.print("\n" + playerName + ", Enter move : (stone/scissors/paper) ");
+            System.out.print("\n" + playerName + ", Enter move : (stone/scissors/paper) "+"\n");
             String playerMove = scanner.nextLine().toLowerCase();
 
             int computerMoveInt = random.nextInt(3);
@@ -30,15 +30,15 @@ public class Main {
                     break;
             }
 
-            System.out.println("Player Move: " + playerMove);
+            System.out.println("\n"+"Player Move: " + playerMove);
             System.out.println("Computer Move: " + computerMove);
 
             String result = "";
             if (playerMove.equals(computerMove)) {
                 result = "Tie";
             } else if ((playerMove.equals("stone") && computerMove.equals("scissors")) ||
-            (playerMove.equals("scissors") && computerMove.equals("paper")) ||
-            (playerMove.equals("paper") && computerMove.equals("stone"))) {
+                    (playerMove.equals("scissors") && computerMove.equals("paper")) ||
+                    (playerMove.equals("paper") && computerMove.equals("stone"))) {
                 result = playerName + " won";
             } else {
                 result = "Computer won";
@@ -46,18 +46,11 @@ public class Main {
 
             System.out.println("result: " + result);
 
-            System.out.print("Do you wish to play again? (yes/no): ");
+            System.out.print("\n"+"Do you wish to play again? (yes/no): "+"\n");
             String playAgainInput = scanner.nextLine().toLowerCase();
             playAgain = playAgainInput.equals("yes");
         }
 
-        System.out.println("Thanks for playing, " + playerName);
+        System.out.println("\n"+"Thanks for playing, " + playerName);
     }
 }
-
-
-
-
-
-
-
