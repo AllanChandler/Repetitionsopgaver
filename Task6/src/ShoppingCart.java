@@ -14,17 +14,6 @@ public class ShoppingCart {
         itemList.add(item);
     }
 
-    public void removeItem(String itemName) {
-        Iterator<Item> iterator = itemList.iterator();
-        while (iterator.hasNext()) {
-            Item item = iterator.next();
-            if (item.getName().equalsIgnoreCase(itemName)) {
-                iterator.remove();
-                break;
-            }
-        }
-    }
-
     public double getTotalPrice() {
         double totalPrice = 0.0;
         double discountAmount = 0.0;

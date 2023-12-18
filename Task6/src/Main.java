@@ -16,8 +16,7 @@ public class Main {
         shoppingCart.addItem(cola);
 
         System.out.println(shoppingCart.getTotalPrice());
-
-        shoppingCart.removeItem("Cola");
+        
         shoppingCart.setDiscount(10);
 
         System.out.println(shoppingCart.getTotalPrice());
